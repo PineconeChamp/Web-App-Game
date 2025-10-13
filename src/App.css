@@ -1,0 +1,33 @@
+.main-window{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+.phone-window{
+    display: flex;
+    width: 24rem;
+    height: 50rem;
+    background-color: rgba(240, 248, 255, 0.555);
+    padding: 1rem;
+    justify-content: center;
+    border: .3rem solid rgba(184, 229, 255, 0.651);
+    box-shadow: 0 0 6px 3px rgb(173, 217, 255);
+}
+
+
+.welcome-text{
+    color: rgb(167, 214, 255);
+    font-family: 'Kiwisoda', 'Courier New', Courier, monospace;
+    font-size: xx-large;
+}
+
+@font-face {
+  font-family: 'Kiwisoda';
+  src: url('./src/assets/fonts/kiwisoda.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
