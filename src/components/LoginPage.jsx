@@ -13,7 +13,7 @@ function LoginPage({ onLogin }) {
 
   return (
     <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <h2>Login</h2>    
+      <h2>Login or Sign up</h2>    
       <input
         type="text"
         placeholder="Username"
@@ -28,7 +28,8 @@ function LoginPage({ onLogin }) {
         onChange={e => setPassword(e.target.value)}
         style={{ margin: '0.5rem', padding: '0.5rem' }}
       />
-      <button type="submit" style={{ margin: '0.5rem', padding: '0.5rem' }}>Login</button>
+      <button type="submit" style={{border: 'rgba(240, 248, 255, 0.341) dotted 2px', margin: '0.5rem', width: '50%'}}> Login</button>
+      <button type="submit" style={{border: 'rgba(240, 248, 255, 0.341) dotted 2px', margin: '0.5rem', width: '50%'}}> Sign Up</button>
     </form>
   );
 }

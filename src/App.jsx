@@ -10,9 +10,18 @@ function App() {
     <div className="main-window">
       <div className="phone-window">
         <div className="game-view">
-          <p>Test</p>
+          <ul className="game-messages">
+            <li>This is a message about the players new location</li>
+            <li>This is a message about encountering enemies</li>
+            <li>This message is about an enemy</li>
+            <li>This message is about an attack</li>
+            <li>This message is about an enemy dying</li>
+            <li>This message is about remaining enemies</li>
+            <li>This message is about the player's health</li>
+            <li>This message is about the player dying</li>
+          </ul>
         </div>
-        <div className="welcome-text">
+        <div className="control-panel">
           {!user ? (
             <LoginPage onLogin={setUser} />
           ) : (
