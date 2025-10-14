@@ -6,7 +6,6 @@ function LoginPage({ onLogin }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simple login logic (replace with real auth as needed)
     if (username && password) {
       onLogin(username);
     }
