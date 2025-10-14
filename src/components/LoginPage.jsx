@@ -14,7 +14,7 @@ function LoginPage({ onLogin }) {
 
   return (
     <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <h2>Login</h2>
+      <h2>Login</h2>    
       <input
         type="text"
         placeholder="Username"
