@@ -16,7 +16,7 @@ function App() {
           {!user ? (
             <LoginPage onLogin={setUser} />
           ) : (
-            <h1>Welcome, {user}!</h1>
+            <h1>Logged In as, {user}!</h1>
           )}
         </div>
       </div>
