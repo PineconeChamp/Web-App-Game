@@ -5,24 +5,34 @@
     height: 100vh;
 }
 
-
-
 .phone-window{
     display: flex;
     width: 24rem;
-    height: 50rem;
+    height: 45rem;
     background-color: rgba(240, 248, 255, 0.555);
     padding: 1rem;
-    justify-content: center;
+    justify-content: flex-start;
     border: .3rem solid rgba(184, 229, 255, 0.651);
     box-shadow: 0 0 6px 3px rgb(173, 217, 255);
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
 }
 
+.game-view {
+    height: 20rem;
+    width: 100%;
+    border: red solid 2px;
+    padding: 1rem;
+}
 
 .welcome-text{
+    display: flex;
     color: rgb(167, 214, 255);
     font-family: 'Kiwisoda', 'Courier New', Courier, monospace;
     font-size: xx-large;
+    justify-content: center;
+    padding-top: 1rem;
 }
 
 @font-face {
