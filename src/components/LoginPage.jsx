@@ -48,7 +48,7 @@ function LoginPage({ onLogin }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const action = e.nativeEvent.submitter.name;
-    
+
     if (username && password) {
       if (action === "login"){
         let result = TryLogin()
@@ -88,7 +88,7 @@ function LoginPage({ onLogin }) {
     }
 
   };
-
+  
   return (
     <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <h2>Login or Sign up</h2>    

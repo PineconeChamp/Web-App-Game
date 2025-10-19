@@ -1,6 +1,10 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+
+from sqlalchemy.orm import Session
+from . import models, schemas, crud
+from .db import engine, SessionLocal
 
 app = FastAPI()
 
@@ -19,6 +23,18 @@ app.add_middleware(
     allow_methods=["*"],        # e.g. ["GET", "POST"]
     allow_headers=["*"],        # e.g. ["Content-Type", "Authorization"]
 )
+
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+        
+@app.post("/users/", response_model=schemas.User)
+def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
+    return crud.create_user(db, user)
+
 
 @app.post("/createaccount")
 async def createaccount(data: AccountRequest):
