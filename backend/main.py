@@ -6,6 +6,8 @@ from sqlalchemy.orm import Session
 from backend import models, schemas, crud
 from .db import engine, SessionLocal
 
+models.Base.metadata.create_all(bind=engine)
+
 app = FastAPI()
 
 class AccountRequest(BaseModel):
