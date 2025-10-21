@@ -74,7 +74,6 @@ function LoginPage({ onLogin }) {
           axios.post("http://localhost:8000/createaccount", {
             username: username,
             password: password,
-            id: 0
           })
           .then(res => console.log(res.data))
           .catch(err => console.error(err));
